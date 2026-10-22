@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf") format("truetype");
+}
+
+@layer base {
+  a {
+    @apply text-primary;
+  }
+
+  a,
+  button,
+  summary,
+  input,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-transparent px-6 font-sans text-base font-semibold no-underline transition-colors duration-fast motion-reduce:transition-none;
+  }
+
+  .btn--primary {
+    @apply bg-primary text-white hover:bg-primary-hover active:bg-primary-active focus-visible:ring-4 focus-visible:ring-primary-soft;
+  }
+
+  .btn--outline {
+    @apply border-secondary-strong bg-white text-secondary-strong hover:bg-secondary-soft active:bg-primary-soft;
+  }
+
+  .btn--white {
+    @apply bg-white text-secondary-strong hover:bg-primary-soft active:bg-primary-soft;
+  }
+
+  .btn--sm {
+    @apply min-h-10 px-4 text-small;
+  }
+
+  .btn--block {
+    @apply w-full;
+  }
+
+  .card {
+    @apply grid content-start gap-4 rounded-card border border-border bg-white p-6 shadow-card transition-card duration-300 hover:shadow-md motion-reduce:transition-none;
+  }
+
+  .badge {
+    @apply inline-flex w-fit items-center gap-1 rounded-full px-4 py-1 text-caption font-medium;
+  }
+
+  .badge--brand {
+    @apply bg-primary-soft text-primary;
+  }
+
+  .badge--success {
+    @apply bg-success-bg text-success;
+  }
+
+  .badge--info {
+    @apply bg-secondary-soft text-secondary-strong;
+  }
+
+  .badge--warning {
+    @apply bg-warning-bg text-warning;
+  }
+}
+
+#top > div:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(rgba(243, 240, 255, 0.88), rgba(243, 240, 255, 0.88));
+}
+
+@media (min-width: 900px) {
+  #top > div:first-child::after {
+    background: linear-gradient(
+      90deg,
+      rgba(243, 240, 255, 0.96) 0%,
+      rgba(243, 240, 255, 0.88) 40%,
+      rgba(243, 240, 255, 0.2) 75%,
+      transparent 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #top > div:first-child {
+    background: url("./assets/images/hero-loop.png") center / cover;
+  }
+}

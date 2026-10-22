@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth scroll-pt-24 motion-reduce:scroll-auto">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пухнастий друг — щоденник здоров'я улюбленця</title>
+    <meta name="description" content="Щоденник ваги та харчування домашнього улюбленця: графік динаміки ваги, раціон і щоденні нотатки в одному місці.">
+    <link rel="stylesheet" href="output.css">
+  </head>
+  <body class="m-0 bg-background text-text font-sans text-base leading-6">
+    <a href="#main" class="absolute -top-skip left-4 z-20 rounded-lg bg-primary px-4 py-2 text-white focus:top-2 focus-visible:ring-4 focus-visible:ring-primary-soft">Перейти до змісту</a>
+    <svg class="hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-paw" viewBox="0 0 24 24">
+        <ellipse cx="6.5" cy="8" rx="2" ry="2.6" fill="currentColor"/>
+        <ellipse cx="11" cy="5.5" rx="2" ry="2.6" fill="currentColor"/>
+        <ellipse cx="16" cy="6.5" rx="2" ry="2.6" fill="currentColor"/>
+        <ellipse cx="19" cy="11" rx="2" ry="2.6" fill="currentColor"/>
+        <path d="M12.5 11.5c-2.5 0-6.5 4.3-6.5 7.2 0 1.8 1.4 2.8 3.1 2.3 1.2-.4 2-.8 3.4-.8s2.2.4 3.4.8c1.7.5 3.1-.5 3.1-2.3 0-2.9-4-7.2-6.5-7.2Z" fill="currentColor"/>
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-circle-check" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="m8 12 2.5 2.5L16.5 9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-dashboard" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="13" y="3" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="3" y="13" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="13" y="13" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-scale" viewBox="0 0 24 24">
+        <path d="M12 3v17M5 20h14M4 6h16M12 6 7.5 14h9L12 6ZM4 6l-3 6h6L4 6Zm16 0-3 6h6l-3-6Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+      </symbol>
+      <symbol id="icon-bowl" viewBox="0 0 24 24">
+        <path d="M4 12h16l-1.5 6a3 3 0 0 1-3 2.3h-7A3 3 0 0 1 5.5 18L4 12Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M3 9c1.3-1.4 2.7-1.4 4 0s2.7 1.4 4 0 2.7-1.4 4 0 2.7 1.4 4 0 2.7-1.4 4 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-gear" viewBox="0 0 24 24">
+        <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm0-6v2m0 15v2m10-9h-2m-16 0H2m17.1-7.1-1.4 1.4M6.3 17.7l-1.4 1.4m14.2 0-1.4-1.4M6.3 6.3 4.9 4.9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+        <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path d="M20.8 8.8c0 5.2-8.8 11-8.8 11s-8.8-5.8-8.8-11A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.8 2.6Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </symbol>
+    </svg>
+
+    <header class="sticky top-0 z-10 border-b border-border bg-white">
+      <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 flex min-h-16 flex-wrap items-center gap-x-6 gap-y-2 py-2">
+        <a href="#top" class="inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><img class="h-9 w-9 object-contain" src="assets/images/logo.png" alt="" width="36" height="36"><span>Пухнастий друг</span></a>
+        <nav class="order-3 w-full overflow-x-auto tablet:order-none tablet:w-auto tablet:flex-1 tablet:overflow-visible" aria-label="Головна навігація">
+          <ul class="flex justify-center gap-6">
+            <li><a href="#features" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Можливості</a></li>
+            <li><a href="#how" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Як це працює</a></li>
+            <li><a href="#faq" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Питання</a></li>
+          </ul>
+        </nav>
+        <div class="ml-auto flex items-center gap-4">
+          <a href="#" class="inline-flex min-h-11 items-center font-semibold no-underline transition-colors duration-200 hover:text-primary-hover hover:underline active:text-primary-active">Увійти</a>
+          <a href="#diary" class="btn btn--primary">Почати демо</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="grid min-h-hero overflow-hidden bg-tint" id="top" aria-labelledby="hero-title">
+        <div class="relative col-start-1 row-start-1" aria-hidden="true">
+          <video class="col-start-1 row-start-1 h-full w-full object-cover motion-reduce:hidden" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-loop.png">
+            <source src="assets/video/video_content_demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 z-1 col-start-1 row-start-1 flex items-center py-12">
+          <div class="grid max-w-copy justify-items-start gap-6">
+            <p class="badge badge--brand"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-paw"></use></svg> Щоденник здоров'я улюбленця</p>
+            <h1 class="font-sans text-heading1 font-extrabold" id="hero-title">Здорові звички. Щасливий пухнастий друг.</h1>
+            <p class="max-w-lead text-lead text-muted">Вага, раціон і щоденна турбота — в одному місці. Помічайте зміни вчасно та даруйте своєму другу більше здорових днів.</p>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <a href="#diary" class="btn btn--primary"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-plus"></use></svg> Створити щоденник</a>
+              <a href="#how" class="btn btn--outline">Як це працює</a>
+            </div>
+            <p class="flex items-center gap-2 text-small text-muted"><span class="flex-none text-primary"><svg class="h-5 w-5" aria-hidden="true"><use href="#icon-circle-check"></use></svg></span> Безкоштовно · без картки · з увагою до приватності</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 lg:py-16" id="features" aria-labelledby="features-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 grid max-w-section gap-2">
+            <p class="text-caption font-semibold text-primary">Усе важливе — поруч</p>
+            <h2 class="font-sans text-heading2 font-bold" id="features-title">Турбота стає простішою, коли є система.</h2>
+            <p class="text-muted">Не потрібно пам'ятати все. Щоденник допоможе зосередитися на тому, що справді важливо.</p>
+          </header>
+          <div class="grid grid-cols-features gap-6">
+            <article class="card">
+              <span class="grid h-14 w-14 place-items-center rounded-xl bg-primary-soft"><img class="h-10 w-10 scale-160 object-contain" src="assets/icons/icon_2.svg" alt="" width="40" height="40" loading="lazy"></span>
+              <h3 class="font-sans text-heading3 font-semibold text-text">Вага під контролем</h3>
+              <p class="text-small text-muted">Записуйте зважування, бачте тренд і порівнюйте показники зі здоровою межею улюбленця.</p>
+              <p class="text-small font-semibold text-primary">Динаміка замість здогадок</p>
+            </article>
+            <article class="card">
+              <span class="grid h-14 w-14 place-items-center justify-self-center rounded-xl bg-primary-soft"><img class="h-10 w-10 scale-160 object-contain" src="assets/icons/icon_3.svg" alt="" width="40" height="40" loading="lazy"></span>
+              <h3 class="font-sans text-heading3 font-semibold text-text">Раціон без зайвого</h3>
+              <p class="text-small text-muted">Плануйте добову норму та відмічайте порції. Знайте, скільки грамів і калорій залишилося на день.</p>
+              <p class="text-small font-semibold text-primary">Кожна порція має значення</p>
+            </article>
+            <article class="card">
+              <span class="grid h-14 w-14 place-items-center rounded-xl bg-primary-soft"><img class="h-10 w-10 object-contain" src="assets/icons/icon_1.svg" alt="" width="40" height="40" loading="lazy"></span>
+              <h3 class="font-sans text-heading3 font-semibold text-text">Історія вашої турботи</h3>
+              <p class="text-small text-muted">Зберігайте щоденні нотатки й звички в одному щоденнику. Важливе легко знайти перед візитом до лікаря.</p>
+              <p class="text-small font-semibold text-primary">Менше тривоги, більше ясності</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 lg:py-16 bg-tint" id="how" aria-labelledby="how-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <h2 class="font-sans text-heading2 font-bold" id="how-title">Від першого запису до здорової звички.</h2>
+          <ol class="mt-8 grid grid-cols-steps gap-8">
+            <li class="grid content-start gap-2"><span class="grid h-9 w-9 place-items-center rounded-full border border-border-strong bg-white text-small font-semibold text-primary">01</span><h3 class="font-sans text-heading3 font-semibold text-text">Познайомте нас із другом</h3><p class="text-small text-muted">Додайте ім'я, породу, вік і фото. Визначте здорову межу ваги разом із ветеринаром.</p></li>
+            <li class="grid content-start gap-2"><span class="grid h-9 w-9 place-items-center rounded-full border border-border-strong bg-white text-small font-semibold text-primary">02</span><h3 class="font-sans text-heading3 font-semibold text-text">Запишіть перші показники</h3><p class="text-small text-muted">Додайте актуальну вагу й добову норму їжі. Це початок вашої спільної історії.</p></li>
+            <li class="grid content-start gap-2"><span class="grid h-9 w-9 place-items-center rounded-full border border-border-strong bg-white text-small font-semibold text-primary">03</span><h3 class="font-sans text-heading3 font-semibold text-text">Приділіть хвилину щодня</h3><p class="text-small text-muted">Відмічайте порції та самопочуття. Зважуйте регулярно, щоб бачити зміни.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="py-12 lg:py-16 bg-tint" id="diary" aria-labelledby="diary-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 grid items-start gap-6 wide:grid-cols-diary">
+          <aside class="grid gap-4 rounded-card bg-white p-4 shadow-card" aria-label="Мій простір">
+            <nav aria-label="Розділи щоденника">
+              <p class="text-caption font-semibold text-primary">Мій простір</p>
+              <ul class="mt-2 flex flex-wrap gap-1 wide:flex-nowrap wide:flex-col">
+                <li><a href="#diary" aria-current="page" class="flex min-h-11 items-center gap-2 rounded-xl px-4 text-small font-medium no-underline transition-colors duration-200 hover:bg-primary-soft hover:text-primary-hover active:bg-primary-soft bg-primary-soft text-primary"><span class="text-primary"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-dashboard"></use></svg></span> Щоденник</a></li>
+                <li><a href="#weight" class="flex min-h-11 items-center gap-2 rounded-xl px-4 text-small font-medium text-text no-underline transition-colors duration-200 hover:bg-primary-soft hover:text-primary-hover active:bg-primary-soft"><span class="text-primary"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-scale"></use></svg></span> Вага</a></li>
+                <li><a href="#ration" class="flex min-h-11 items-center gap-2 rounded-xl px-4 text-small font-medium text-text no-underline transition-colors duration-200 hover:bg-primary-soft hover:text-primary-hover active:bg-primary-soft"><span class="text-primary"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-bowl"></use></svg></span> Харчування</a></li>
+                <li><a href="#profile" class="flex min-h-11 items-center gap-2 rounded-xl px-4 text-small font-medium text-text no-underline transition-colors duration-200 hover:bg-primary-soft hover:text-primary-hover active:bg-primary-soft"><span class="text-primary"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-paw"></use></svg></span> Профіль</a></li>
+                <li><a href="#" class="flex min-h-11 items-center gap-2 rounded-xl px-4 text-small font-medium text-text no-underline transition-colors duration-200 hover:bg-primary-soft hover:text-primary-hover active:bg-primary-soft"><span class="text-primary"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-gear"></use></svg></span> Налаштування</a></li>
+              </ul>
+            </nav>
+            <p class="flex gap-2 rounded-xl bg-secondary-soft p-4 text-small text-secondary-strong"><span class="flex-none text-primary"><svg class="h-5 w-5" aria-hidden="true"><use href="#icon-heart"></use></svg></span> Маленькі записи — велика турбота щодня.</p>
+          </aside>
+
+          <!-- Окрема секція групує вміст щоденника під його заголовком. -->
+          <section class="grid min-w-0 gap-6" aria-labelledby="diary-title">
+            <header class="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p class="text-small"><time datetime="2026-10-07T14:15">Середа, 7 жовтня 2026 · 14:15</time></p>
+                <h2 class="font-sans text-heading2 font-bold" id="diary-title">Щоденник Марса</h2>
+                <p class="text-muted text-small">Вітаємо, Олено. Сьогодні все під контролем.</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <a href="#weigh" class="btn btn--primary btn--sm"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-plus"></use></svg> Додати вагу</a>
+                <a href="#ration" class="btn btn--outline btn--sm"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-bowl"></use></svg> Записати їжу</a>
+              </div>
+            </header>
+
+            <article class="card flex flex-wrap items-center gap-x-6 gap-y-4 group" id="profile">
+              <figure class="h-pet w-pet overflow-hidden rounded-xl"><img class="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" src="assets/images/mars.jpg" alt="Портрет вельш-коргі" width="154" height="126" loading="lazy"></figure>
+              <div class="grid flex-pet gap-1">
+                <h3 class="font-sans text-heading3 font-semibold text-text">Марс</h3>
+                <p class="text-muted text-small">Вельш-коргі · хлопчик · 3 роки</p>
+                <p class="badge badge--success"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-circle-check"></use></svg> У межах норми</p>
+              </div>
+              <dl>
+                <div><dt>Здорова межа Марса</dt><dd>12–13 кг</dd><dd class="mt-1"><a href="#" class="inline-flex min-h-11 items-center font-semibold text-primary text-small no-underline transition-colors duration-200 hover:text-primary-hover hover:underline active:text-primary-active">Редагувати профіль</a></dd></div>
+                <div><dt>Останнє зважування</dt><dd>12,4 кг</dd><dd class="mt-1 text-muted text-small">Сьогодні о 09:00</dd></div>
+              </dl>
+            </article>
+
+            <section class="grid gap-6 cards:grid-cols-3" aria-label="Показники та записи щоденника">
+              <article class="card cards:col-span-2" id="weight">
+                <header class="flex items-start gap-2 text-primary">
+                  <svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-scale"></use></svg>
+                  <div><h3 class="font-sans text-heading3 font-semibold text-text">Динаміка ваги</h3><p class="text-muted text-small">9 вересня — 7 жовтня 2026</p></div>
+                </header>
+                <div class="flex gap-1" role="group" aria-label="Період графіка">
+                  <button type="button" aria-pressed="true" class="min-h-9 cursor-pointer rounded-lg px-4 font-sans text-small font-semibold text-primary transition-colors duration-200 hover:bg-primary-soft active:bg-primary-soft bg-primary-soft">Місяць</button>
+                  <button type="button" aria-pressed="false" class="min-h-9 cursor-pointer rounded-lg px-4 font-sans text-small font-semibold text-primary transition-colors duration-200 hover:bg-primary-soft active:bg-primary-soft">3 місяці</button>
+                  <button type="button" aria-pressed="false" class="min-h-9 cursor-pointer rounded-lg px-4 font-sans text-small font-semibold text-primary transition-colors duration-200 hover:bg-primary-soft active:bg-primary-soft">Рік</button>
+                </div>
+                <p class="flex flex-wrap items-center gap-4"><strong class="text-3xl font-extrabold">12,4 кг</strong> <span class="badge badge--info">−0,4 кг за місяць</span></p>
+                <figure>
+                  <svg class="h-auto w-full" viewBox="0 0 520 190" role="img" aria-labelledby="chart-title">
+                    <title id="chart-title">Вага Марса за місяць знизилась з 12,9 до 12,4 кг, у межах здорової зони 12–13 кг</title>
+                    <rect x="60" y="14" width="440" height="126" class="fill-secondary-soft"/>
+                    <g class="fill-muted text-axis"><text x="52" y="22" text-anchor="end">13,0</text><text x="52" y="82" text-anchor="end">12,6</text><text x="52" y="136" text-anchor="end">12,2</text>
+                      <text x="60" y="162">09.09</text><text x="170" y="162">16.09</text><text x="280" y="162">23.09</text><text x="390" y="162">30.09</text><text x="480" y="162">07.10</text></g>
+                    <polyline points="60,42 500,112" class="fill-none stroke-secondary-strong stroke-3" stroke-linecap="round"/>
+                  </svg>
+                  <figcaption class="mt-2 text-muted text-small">Здорова межа Марса: 12–13 кг. Поточна вага в нормі.</figcaption>
+                </figure>
+              </article>
+
+              <article class="card" id="ration">
+                <header class="flex items-start gap-2 text-primary">
+                  <svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-bowl"></use></svg>
+                  <div><h3 class="font-sans text-heading3 font-semibold text-text">Поточний раціон</h3><p class="text-muted text-small"><time datetime="2026-10-07">7 жовтня 2026</time></p></div>
+                </header>
+                <ul class="grid gap-1 font-medium"><li>100 г Корм «Мурчик»</li><li>40 г смаколики</li></ul>
+                <a href="#" class="btn btn--primary btn--block"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-plus"></use></svg> Встановити новий раціон</a>
+              </article>
+
+              <article class="card cards:col-span-2">
+                <header class="flex items-start gap-2"><div><h3 class="font-sans text-heading3 font-semibold text-text">Останні зважування</h3><p class="text-muted text-small">Однаковий час — точніше порівняння</p></div></header>
+                <ul>
+                  <li class="flex items-center gap-4 border-b border-border py-4"><span class="flex-none text-primary"><svg class="h-5 w-5" aria-hidden="true"><use href="#icon-scale"></use></svg></span><span class="flex-1">7 жовтня</span><strong>12,4 кг</strong><small class="min-w-14 rounded-full bg-secondary-soft px-2 py-0.5 text-right text-caption text-secondary-strong">−0,1 кг</small></li>
+                  <li class="flex items-center gap-4 border-b border-border py-4"><span class="flex-none text-primary"><svg class="h-5 w-5" aria-hidden="true"><use href="#icon-scale"></use></svg></span><span class="flex-1">30 вересня</span><strong>12,5 кг</strong><small class="min-w-14 rounded-full bg-secondary-soft px-2 py-0.5 text-right text-caption text-secondary-strong">−0,1 кг</small></li>
+                  <li class="flex items-center gap-4 border-b border-border py-4"><span class="flex-none text-primary"><svg class="h-5 w-5" aria-hidden="true"><use href="#icon-scale"></use></svg></span><span class="flex-1">23 вересня</span><strong>12,6 кг</strong><small class="min-w-14 rounded-full bg-secondary-soft px-2 py-0.5 text-right text-caption text-secondary-strong">−0,1 кг</small></li>
+                </ul>
+                <p class="text-center"><a href="#" class="inline-flex min-h-11 items-center font-semibold no-underline transition-colors duration-200 hover:text-primary-hover hover:underline active:text-primary-active">Вся історія ваги</a></p>
+              </article>
+
+              <article class="card">
+                <header class="flex items-start gap-2"><div><h3 class="font-sans text-heading3 font-semibold text-text">Попередні раціони</h3><p class="text-muted text-small">3 останні</p></div></header>
+                <ul class="grid gap-4">
+                  <li class="flex items-center gap-4 border-b border-border pb-4"><span class="grid h-8 w-8 flex-none place-items-center rounded-lg bg-success-bg text-success"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-check"></use></svg></span><p class="text-small"><strong>100 г Корм «Мурчик»</strong><br>40 г смаколики</p></li>
+                  <li class="flex items-center gap-4 border-b border-border pb-4"><span class="grid h-8 w-8 flex-none place-items-center rounded-lg bg-success-bg text-success"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-check"></use></svg></span><p class="text-small"><strong>150 г Корм «Корм»</strong></p></li>
+                  <li class="flex items-center gap-4 border-b border-border pb-4"><span class="grid h-8 w-8 flex-none place-items-center rounded-lg bg-success-bg text-success"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-check"></use></svg></span><p class="text-small"><strong>120 г Корм "Сила"</strong><br>30 г прикорму "Смаколики"</p></li>
+                </ul>
+              </article>
+
+              <article class="card cards:col-span-2" id="weigh">
+                <header class="flex items-start gap-2"><div><h3 class="font-sans text-heading3 font-semibold text-text">Нове зважування</h3></div></header>
+                <form class="grid gap-4 grid-cols-form items-end" action="#" method="post">
+                  <div class="grid gap-1"><label class="text-small font-semibold" for="weight-input">Вага, кг</label><input id="weight-input" name="weight" type="number" step="0.1" min="0" inputmode="decimal" placeholder="Наприклад 12,4" class="min-h-11 w-full rounded-lg border border-border-strong bg-white px-4 py-2 text-base font-normal text-text "></div>
+                  <div class="grid gap-1"><label class="text-small font-semibold" for="weight-date">Дата зважування</label><input id="weight-date" name="date" type="date" value="2026-10-07" class="min-h-11 w-full rounded-lg border border-border-strong bg-white px-4 py-2 text-base font-normal text-text "></div>
+                  <button type="submit" class="col-span-full justify-self-start btn btn--primary btn--sm">Зберегти зважування</button>
+                </form>
+              </article>
+
+              <article class="card">
+                <p class="badge badge--warning"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-clock"></use></svg> Нагадування активне</p>
+                <p class="text-small">Зважуйте Марса раз на тиждень. Якщо вага різко зміниться або зникне апетит — зверніться до ветеринара.</p>
+                <a href="#" class="btn btn--outline btn--sm">Налаштувати нагадування</a>
+              </article>
+
+              <article class="card cards:col-span-full">
+                <header class="flex items-start gap-2 text-primary">
+                  <svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-heart"></use></svg>
+                  <div><h3 class="font-sans text-heading3 font-semibold text-text">Нотатка на сьогодні</h3><p class="text-muted text-small">Самопочуття, активність, спостереження</p></div>
+                </header>
+                <form class="grid gap-4" action="#" method="post">
+                  <div class="grid gap-1"><label class="text-small font-semibold" for="note">Як почувається Марс?</label><textarea id="note" name="note" rows="3" class="min-h-11 w-full resize-y rounded-lg border border-border-strong bg-white px-4 py-2 text-base font-normal text-text ">Активний на прогулянці. Апетит хороший, сніданок та обід з'їв повністю. Вечірня порція — о 19:00.</textarea></div>
+                  <div class="flex flex-wrap items-center gap-x-4 gap-y-2"><button type="submit" class="btn btn--primary btn--sm">Зберегти нотатку</button>
+                    <p class="badge badge--success"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-circle-check"></use></svg> Збережено о 14:15</p></div>
+                </form>
+              </article>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <section class="py-12 lg:py-16" aria-labelledby="story-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <figure class="grid items-center gap-8 rounded-card bg-secondary-soft p-6 tablet:grid-cols-story tablet:p-8 group">
+            <div class="overflow-hidden rounded-xl"><img class="aspect-story w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" src="assets/images/testimonial.jpg" alt="Олена обіймає Марса на дивані" loading="lazy"></div>
+            <div class="grid gap-4">
+              <!-- Заголовок секції узгоджує історію з ієрархією h1–h3 сторінки. -->
+              <h2 class="font-sans text-caption font-semibold text-secondary-strong" id="story-title">Історія Олени та Марса</h2>
+              <blockquote><p class="text-quote font-bold">«Раніше я намагалася все запам'ятати. Тепер бачу, як змінюється вага Марса, і точно знаю, чи вистачило йому їжі сьогодні».</p></blockquote>
+              <figcaption class="text-small text-secondary-strong">Олена — власниця трирічного коргі Марса</figcaption>
+              <p class="text-muted text-small">Ілюстративна історія використання щоденника.</p>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="py-12 lg:py-16 bg-tint" id="faq" aria-labelledby="faq-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <h2 class="font-sans text-heading2 font-bold" id="faq-title">Питання, які виникають перед стартом.</h2>
+          <section class="mt-8 grid max-w-faq gap-4" aria-label="Відповіді на поширені запитання">
+            <details class="rounded-xl border border-border bg-white px-6 py-4 transition-card duration-300 hover:shadow-md"><summary class="min-h-11 cursor-pointer font-semibold ">Це справді безкоштовно?</summary><p class="mt-2 text-small text-muted">Так. Створіть профіль улюбленця та ведіть щоденник ваги й харчування без платіжної картки.</p></details>
+            <details class="rounded-xl border border-border bg-white px-6 py-4 transition-card duration-300 hover:shadow-md"><summary class="min-h-11 cursor-pointer font-semibold ">Як визначити добову норму?</summary><p class="mt-2 text-small text-muted">Погодьте норму з ветеринаром. Внесіть грами та калорійність корму — щоденник покаже прогрес і залишок.</p></details>
+            <details class="rounded-xl border border-border bg-white px-6 py-4 transition-card duration-300 hover:shadow-md"><summary class="min-h-11 cursor-pointer font-semibold ">Що робити, якщо вага різко змінилася?</summary><p class="mt-2 text-small text-muted">Перевірте зважування й зверніться до ветеринара. Графік допоможе помітити зміни, але не ставить діагноз.</p></details>
+            <details class="rounded-xl border border-border bg-white px-6 py-4 transition-card duration-300 hover:shadow-md"><summary class="min-h-11 cursor-pointer font-semibold ">Хто бачить мої записи?</summary><p class="mt-2 text-small text-muted">Щоденник доступний у вашому обліковому записі. Ви самі вирішуєте, яку інформацію показати ветеринару.</p></details>
+          </section>
+        </div>
+      </section>
+
+      <section class="py-12 lg:py-16" aria-labelledby="cta-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap items-center justify-between gap-6 rounded-card bg-primary p-8 text-white">
+            <header><h2 class="mb-2 max-w-cta font-sans text-heading2 font-bold text-white" id="cta-title">Почніть із маленького запису. Продовжіть великою турботою.</h2><p>Вашому другу потрібні ви. А вам — трохи більше ясності.</p></header>
+            <a href="#diary" class="btn btn--white">Створити щоденник</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-white py-8">
+      <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 grid gap-6 tablet:grid-cols-footer">
+        <section aria-label="Про щоденник"><a href="#top" class="mb-2 inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><span>Пухнастий друг</span></a><p class="text-muted">Більше спокою вам. Більше здорових днів вашому другу.</p></section>
+        <nav aria-label="Допоміжна навігація"><ul class="flex flex-wrap gap-6"><li><a href="#" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Про нас</a></li><li><a href="#" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Підтримка</a></li><li><a href="#" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Конфіденційність</a></li></ul></nav>
+        <p class="text-muted text-small tablet:col-span-full">© 2026 Пухнастий друг · <a href="mailto:hello@pukhnastyi.ua" class="text-primary">hello@pukhnastyi.ua</a> · Щоденник не замінює консультацію ветеринара.</p>
+      </div>
+    </footer>
+  </body>
+</html>

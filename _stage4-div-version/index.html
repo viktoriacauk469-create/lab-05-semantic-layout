@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пухнастий друг — щоденник здоров'я улюбленця</title>
+<meta name="description" content="Щоденник ваги та харчування домашнього улюбленця: графік динаміки ваги, раціон і щоденні нотатки в одному місці.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти до змісту</a>
+
+  <!-- Хедер виділено як верхній блок навігації сайту для семантичного структурного розмітку. -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#top"><img src="../assets/images/logo.png" alt="" width="36" height="36"><span>Пухнастий друг</span></a>
+
+      <nav class="main-nav" aria-label="Головна навігація">
+        <ul class="main-nav__list">
+          <li><a href="#features">Можливості</a></li>
+          <li><a href="#how">Як це працює</a></li>
+          <li><a href="#faq">Питання</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="link-strong" href="#">Увійти</a>
+        <a class="btn btn--primary" href="#diary">Почати демо</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основний вміст сторінки винесено в <main>, що покращує SEO, доступність і навігацію. -->
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero__media" aria-hidden="true">
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg">
+      <source src="assets/video/video_content_demo.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="container hero__content">
+    <div class="hero__text">
+      <p class="badge badge--brand"><i class="fa-solid fa-paw" aria-hidden="true"></i> Щоденник здоров'я улюбленця</p>
+      <h1 id="hero-title">Здорові звички. Щасливий пухнастий друг.</h1>
+      <p class="lead">Вага, раціон і щоденна турбота — в одному місці. Помічайте зміни вчасно та даруйте своєму другу більше здорових днів.</p>
+      <div class="btn-group">
+        <a class="btn btn--primary" href="#diary"><i class="fa-solid fa-plus" aria-hidden="true"></i> Створити щоденник</a>
+        <a class="btn btn--outline" href="#how">Як це працює</a>
+      </div>
+      <p class="hero__note"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Безкоштовно · без картки · з увагою до приватності</p>
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Усе важливе — поруч</p>
+          <h2 id="features-title">Турбота стає простішою, коли є система.</h2>
+          <p class="muted">Не потрібно пам'ятати все. Щоденник допоможе зосередитися на тому, що справді важливо.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card feature">
+            <span class="feature__icon"><img src="../assets/icons/weight.png" alt="" width="40" height="40"></span>
+            <h3>Вага під контролем</h3>
+            <p>Записуйте зважування, бачте тренд і порівнюйте показники зі здоровою межею улюбленця.</p>
+            <p class="feature__note">Динаміка замість здогадок</p>
+          </article>
+
+          <article class="card feature">
+            <span class="feature__icon"><img src="../assets/icons/ration.png" alt="" width="40" height="40"></span>
+            <h3>Раціон без зайвого</h3>
+            <p>Плануйте добову норму та відмічайте порції. Знайте, скільки грамів і калорій залишилося на день.</p>
+            <p class="feature__note">Кожна порція має значення</p>
+          </article>
+
+          <article class="card feature">
+            <span class="feature__icon"><img src="../assets/icons/profile.png" alt="" width="40" height="40"></span>
+            <h3>Історія вашої турботи</h3>
+            <p>Зберігайте щоденні нотатки й звички в одному щоденнику. Важливе легко знайти перед візитом до лікаря.</p>
+            <p class="feature__note">Менше тривоги, більше ясності</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title">Від першого запису до здорової звички.</h2>
+        <ol class="steps">
+          <li class="step"><span class="step__num">01</span><h3>Познайомте нас із другом</h3><p>Додайте ім'я, породу, вік і фото. Визначте здорову межу ваги разом із ветеринаром.</p></li>
+          <li class="step"><span class="step__num">02</span><h3>Запишіть перші показники</h3><p>Додайте актуальну вагу й добову норму їжі. Це початок вашої спільної історії.</p></li>
+          <li class="step"><span class="step__num">03</span><h3>Приділіть хвилину щодня</h3><p>Відмічайте порції та самопочуття. Зважуйте регулярно, щоб бачити зміни.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--tint diary" id="diary" aria-labelledby="diary-title">
+      <div class="container diary__grid">
+        <aside class="sidebar" aria-label="Мій простір">
+          <div aria-label="Розділи щоденника">
+            <p class="eyebrow">Мій простір</p>
+            <ul class="sidebar__list">
+              <li><a class="sidebar__link is-active" href="#diary" aria-current="page"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i> Щоденник</a></li>
+              <li><a class="sidebar__link" href="#weight"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Вага</a></li>
+              <li><a class="sidebar__link" href="#ration"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i> Харчування</a></li>
+              <li><a class="sidebar__link" href="#profile"><i class="fa-solid fa-paw" aria-hidden="true"></i> Профіль</a></li>
+              <li><a class="sidebar__link" href="#"><i class="fa-solid fa-gear" aria-hidden="true"></i> Налаштування</a></li>
+            </ul>
+          </div>
+          <p class="sidebar__tip"><i class="fa-regular fa-heart" aria-hidden="true"></i> Маленькі записи — велика турбота щодня.</p>
+        </aside>
+
+        <div class="diary__content">
+          <header class="diary__head">
+            <div>
+              <p class="small"><time datetime="2026-10-07T14:15">Середа, 7 жовтня 2026 · 14:15</time></p>
+              <h2 id="diary-title">Щоденник Марса</h2>
+              <p class="muted small">Вітаємо, Олено. Сьогодні все під контролем.</p>
+            </div>
+            <div class="btn-group">
+              <a class="btn btn--primary btn--sm" href="#weigh"><i class="fa-solid fa-plus" aria-hidden="true"></i> Додати вагу</a>
+              <a class="btn btn--outline btn--sm" href="#ration"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i> Записати їжу</a>
+            </div>
+          </header>
+
+          <article class="card pet-card" id="profile">
+            <img src="../assets/images/mars.jpg" alt="Марс, вельш-коргі" width="154" height="126">
+            <div class="pet-card__info">
+              <h3>Марс</h3>
+              <p class="muted small">Вельш-коргі · хлопчик · 3 роки</p>
+              <p class="badge badge--success"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> У межах норми</p>
+            </div>
+            <dl class="pet-card__stats">
+              <div><dt>Здорова межа Марса</dt><dd class="stats__value">12–13 кг</dd><dd><a class="link-strong small" href="#">Редагувати профіль</a></dd></div>
+              <div><dt>Останнє зважування</dt><dd class="stats__value">12,4 кг</dd><dd class="muted small">Сьогодні о 09:00</dd></div>
+            </dl>
+          </article>
+
+          <div class="diary__cards">
+            <article class="card" id="weight">
+              <div class="card__head">
+                <i class="fa-solid fa-scale-balanced icon" aria-hidden="true"></i>
+                <div><h3>Динаміка ваги</h3><p class="muted small">9 вересня — 7 жовтня 2026</p></div>
+              </div>
+              <div class="tabs" role="group" aria-label="Період графіка">
+                <button class="tab is-active" type="button" aria-pressed="true">Місяць</button>
+                <button class="tab" type="button" aria-pressed="false">3 місяці</button>
+                <button class="tab" type="button" aria-pressed="false">Рік</button>
+              </div>
+              <p class="chart__value"><strong>12,4 кг</strong> <span class="badge badge--info">−0,4 кг за місяць</span></p>
+              <figure class="chart">
+                <svg viewBox="0 0 520 190" role="img" aria-labelledby="chart-title">
+                  <title id="chart-title">Вага Марса за місяць знизилась з 12,9 до 12,4 кг, у межах здорової зони 12–13 кг</title>
+                  <rect x="60" y="14" width="440" height="126" class="chart__zone"></rect>
+                  <g class="chart__axis"><text x="52" y="22" text-anchor="end">13,0</text><text x="52" y="82" text-anchor="end">12,6</text><text x="52" y="136" text-anchor="end">12,2</text>
+                  <text x="60" y="162">09.09</text><text x="170" y="162">16.09</text><text x="280" y="162">23.09</text><text x="390" y="162">30.09</text><text x="480" y="162">07.10</text></g>
+                  <polyline points="60,42 500,112" class="chart__line"></polyline>
+                </svg>
+                <figcaption class="muted small">Здорова межа Марса: 12–13 кг. Поточна вага в нормі.</figcaption>
+              </figure>
+            </article>
+
+            <article class="card" id="ration">
+              <div class="card__head">
+                <i class="fa-solid fa-bowl-food icon" aria-hidden="true"></i>
+                <div><h3>Поточний раціон</h3><p class="muted small"><time datetime="2026-10-07">7 жовтня 2026</time></p></div>
+              </div>
+              <ul class="plain-list"><li>100 г Корм «Мурчик»</li><li>40 г смаколики</li></ul>
+              <a class="btn btn--primary btn--block" href="#"><i class="fa-solid fa-plus" aria-hidden="true"></i> Встановити новий раціон</a>
+            </article>
+
+            <article class="card">
+              <div class="card__head"><div><h3>Останні зважування</h3><p class="muted small">Однаковий час — точніше порівняння</p></div></div>
+              <ul class="log">
+                <li><i class="fa-solid fa-scale-balanced icon" aria-hidden="true"></i><span>7 жовтня</span><strong>12,4 кг</strong><small>−0,1 кг</small></li>
+                <li><i class="fa-solid fa-scale-balanced icon" aria-hidden="true"></i><span>30 вересня</span><strong>12,5 кг</strong><small>−0,1 кг</small></li>
+                <li><i class="fa-solid fa-scale-balanced icon" aria-hidden="true"></i><span>23 вересня</span><strong>12,6 кг</strong><small>−0,1 кг</small></li>
+              </ul>
+              <p class="center"><a class="link-strong" href="#">Вся історія ваги</a></p>
+            </article>
+
+            <article class="card">
+              <div class="card__head"><div><h3>Попередні раціони</h3><p class="muted small">3 останні</p></div></div>
+              <ul class="history">
+                <li><span class="history__mark history__mark--ok"><i class="fa-solid fa-check" aria-hidden="true"></i></span><p><strong>100 г Корм «Мурчик»</strong><br>40 г смаколики</p></li>
+                <li><span class="history__mark history__mark--ok"><i class="fa-solid fa-check" aria-hidden="true"></i></span><p><strong>150 г Корм «Корм»</strong></p></li>
+                <li><span class="history__mark history__mark--wait"><i class="fa-regular fa-clock" aria-hidden="true"></i></span><p><strong>19:00 · Вечеря</strong></p></li>
+              </ul>
+            </article>
+
+            <article class="card" id="weigh">
+              <div class="card__head"><div><h3>Нове зважування</h3></div></div>
+              <form class="form form--row" action="#" method="post">
+                <div class="field"><label for="weight-input">Вага, кг</label><input id="weight-input" name="weight" type="number" step="0.1" min="0" inputmode="decimal" placeholder="Наприклад 12,4"></div>
+                <div class="field"><label for="weight-date">Дата зважування</label><input id="weight-date" name="date" type="date" value="2026-10-07"></div>
+                <button class="btn btn--primary btn--sm" type="submit">Зберегти зважування</button>
+              </form>
+            </article>
+
+            <article class="card">
+              <p class="badge badge--warning"><i class="fa-regular fa-clock" aria-hidden="true"></i> Нагадування активне</p>
+              <p class="small">Зважуйте Марса раз на тиждень. Якщо вага різко зміниться або зникне апетит — зверніться до ветеринара.</p>
+              <a class="btn btn--outline btn--sm" href="#">Налаштувати нагадування</a>
+            </article>
+
+            <article class="card card--wide">
+              <div class="card__head">
+                <i class="fa-regular fa-heart icon" aria-hidden="true"></i>
+                <div><h3>Нотатка на сьогодні</h3><p class="muted small">Самопочуття, активність, спостереження</p></div>
+              </div>
+              <form class="form" action="#" method="post">
+                <div class="field"><label for="note">Як почувається Марс?</label><textarea id="note" name="note" rows="3">Активний на прогулянці. Апетит хороший, сніданок та обід з'їв повністю. Вечірня порція — о 19:00.</textarea></div>
+                <div class="btn-group"><button class="btn btn--primary btn--sm" type="submit">Зберегти нотатку</button>
+                <p class="badge badge--success"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Збережено о 14:15</p></div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="story-title">
+      <div class="container">
+        <figure class="story">
+          <img src="../assets/images/testimonial.jpg" alt="Олена обіймає Марса на дивані">
+          <div class="story__body">
+            <p class="eyebrow" id="story-title">Історія Олени та Марса</p>
+            <blockquote><p>«Раніше я намагалася все запам'ятати. Тепер бачу, як змінюється вага Марса, і точно знаю, чи вистачило йому їжі сьогодні».</p></blockquote>
+            <figcaption>Олена — власниця трирічного коргі Марса</figcaption>
+            <p class="muted small">Ілюстративна історія використання щоденника.</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Питання, які виникають перед стартом.</h2>
+        <div class="faq">
+          <details class="faq__item"><summary>Це справді безкоштовно?</summary><p>Так. Створіть профіль улюбленця та ведіть щоденник ваги й харчування без платіжної картки.</p></details>
+          <details class="faq__item"><summary>Як визначити добову норму?</summary><p>Погодьте норму з ветеринаром. Внесіть грами та калорійність корму — щоденник покаже прогрес і залишок.</p></details>
+          <details class="faq__item"><summary>Що робити, якщо вага різко змінилася?</summary><p>Перевірте зважування й зверніться до ветеринара. Графік допоможе помітити зміни, але не ставить діагноз.</p></details>
+          <details class="faq__item"><summary>Хто бачить мої записи?</summary><p>Щоденник доступний у вашому обліковому записі. Ви самі вирішуєте, яку інформацію показати ветеринару.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta">
+          <div><h2 id="cta-title">Почніть із маленького запису. Продовжіть великою турботою.</h2><p>Вашому другу потрібні ви. А вам — трохи більше ясності.</p></div>
+          <a class="btn btn--white" href="#diary">Створити щоденник</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div><a class="logo" href="#top"><span>Пухнастий друг</span></a><p class="muted">Більше спокою вам. Більше здорових днів вашому другу.</p></div>
+      <nav aria-label="Допоміжна навігація">
+        <ul class="footer-nav"><li><a href="#">Про нас</a></li><li><a href="#">Підтримка</a></li><li><a href="#">Конфіденційність</a></li></ul>
+      </nav>
+      <p class="muted small site-footer__legal">© 2026 Пухнастий друг · <a href="mailto:hello@pukhnastyi.ua">hello@pukhnastyi.ua</a> · Щоденник не замінює консультацію ветеринара.</p>
+    </div>
+  </footer>
+</body>
+</html>
