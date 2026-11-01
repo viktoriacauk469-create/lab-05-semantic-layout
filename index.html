@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk" class="scroll-smooth scroll-pt-24 motion-reduce:scroll-auto">
   <head>
+    <!-- Налаштування мови, адаптивного відображення, назви та опису сторінки. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пухнастий друг — щоденник здоров'я улюбленця</title>
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="output.css">
   </head>
   <body class="m-0 bg-background text-text font-sans text-base leading-6">
+    <!-- Посилання дає змогу клавіатурою одразу перейти до основного вмісту. -->
     <a href="#main" class="absolute -top-skip left-4 z-20 rounded-lg bg-primary px-4 py-2 text-white focus:top-2 focus-visible:ring-4 focus-visible:ring-primary-soft">Перейти до змісту</a>
+    <!-- Спрайт SVG-іконок: потрібний символ відображається через <use href="#...">. -->
     <svg class="hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <symbol id="icon-paw" viewBox="0 0 24 24">
         <ellipse cx="6.5" cy="8" rx="2" ry="2.6" fill="currentColor"/>
@@ -53,6 +56,7 @@
       </symbol>
     </svg>
 
+    <!-- Закріплена шапка: логотип, навігація між секціями та кнопки входу/демо. -->
     <header class="sticky top-0 z-10 border-b border-border bg-white">
       <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 flex min-h-16 flex-wrap items-center gap-x-6 gap-y-2 py-2">
         <a href="#top" class="inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><img class="h-9 w-9 object-contain" src="assets/images/logo.png" alt="" width="36" height="36"><span>Пухнастий друг</span></a>
@@ -60,6 +64,8 @@
           <ul class="flex justify-center gap-6">
             <li><a href="#features" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Можливості</a></li>
             <li><a href="#how" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Як це працює</a></li>
+            <li><a href="#video" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Відео</a></li>
+            <li><a href="#contacts" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Контакти</a></li>
             <li><a href="#faq" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Питання</a></li>
           </ul>
         </nav>
@@ -71,6 +77,7 @@
     </header>
 
     <main id="main">
+      <!-- Перший екран із фоновим відео, коротким описом сервісу та кнопками переходу. -->
       <section class="grid min-h-hero overflow-hidden bg-tint" id="top" aria-labelledby="hero-title">
         <div class="relative col-start-1 row-start-1" aria-hidden="true">
           <video class="col-start-1 row-start-1 h-full w-full object-cover motion-reduce:hidden" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-loop.png">
@@ -91,6 +98,7 @@
         </div>
       </section>
 
+      <!-- Картки описують основні можливості щоденника: вагу, раціон і нотатки. -->
       <section class="py-12 lg:py-16" id="features" aria-labelledby="features-title">
         <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
           <header class="mb-8 grid max-w-section gap-2">
@@ -121,6 +129,7 @@
         </div>
       </section>
 
+      <!-- Нумерований перелік пояснює послідовність початку роботи зі щоденником. -->
       <section class="py-12 lg:py-16 bg-tint" id="how" aria-labelledby="how-title">
         <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
           <h2 class="font-sans text-heading2 font-bold" id="how-title">Від першого запису до здорової звички.</h2>
@@ -132,8 +141,28 @@
         </div>
       </section>
 
+      <!-- Вбудоване відео YouTube з адаптивним контейнером і підписом. -->
+      <section class="py-12 lg:py-16" id="video" aria-labelledby="video-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 grid max-w-section gap-2">
+            <h2 class="font-sans text-heading2 font-bold" id="video-title">Відео про здоров’я улюбленців</h2>
+            <p class="text-muted">Чому так важливо регулярно зважувати своїх улюбленців</p>
+          </header>
+          <!-- ===== МЕДІА: відео YouTube (початок) ===== -->
+          <figure>
+            <div class="mx-auto aspect-video w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
+              <iframe class="h-full w-full" src="https://www.youtube-nocookie.com/embed/xofrhWtnd0I" title="Відео про важливість регулярного зважування улюбленців" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <figcaption class="mt-2 text-muted text-small">Регулярне зважування допомагає стежити за здоров’ям улюбленця. <a href="https://www.youtube.com/watch?v=xofrhWtnd0I" target="_blank" rel="noopener noreferrer">Дивитися на YouTube</a></figcaption>
+          </figure>
+          <!-- ===== МЕДІА: відео YouTube (кінець) ===== -->
+        </div>
+      </section>
+
+      <!-- Демонстраційний макет щоденника: меню розділів і панель даних улюбленця. -->
       <section class="py-12 lg:py-16 bg-tint" id="diary" aria-labelledby="diary-title">
         <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 grid items-start gap-6 wide:grid-cols-diary">
+          <!-- Бічне меню переходить до профілю, ваги та харчування в межах макета. -->
           <aside class="grid gap-4 rounded-card bg-white p-4 shadow-card" aria-label="Мій простір">
             <nav aria-label="Розділи щоденника">
               <p class="text-caption font-semibold text-primary">Мій простір</p>
@@ -162,6 +191,7 @@
               </div>
             </header>
 
+            <!-- Профіль улюбленця показує фото, характеристики та останні показники. -->
             <article class="card flex flex-wrap items-center gap-x-6 gap-y-4 group" id="profile">
               <figure class="h-pet w-pet overflow-hidden rounded-xl"><img class="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" src="assets/images/mars.jpg" alt="Портрет вельш-коргі" width="154" height="126" loading="lazy"></figure>
               <div class="grid flex-pet gap-1">
@@ -175,7 +205,9 @@
               </dl>
             </article>
 
+            <!-- Картки панелі: графік ваги, раціони, попередні записи й форми. -->
             <section class="grid gap-6 cards:grid-cols-3" aria-label="Показники та записи щоденника">
+              <!-- Графік SVG порівнює вагу з позначеною здоровою межею. -->
               <article class="card cards:col-span-2" id="weight">
                 <header class="flex items-start gap-2 text-primary">
                   <svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-scale"></use></svg>
@@ -199,6 +231,7 @@
                 </figure>
               </article>
 
+              <!-- Поточний раціон відображає приклад добових порцій. -->
               <article class="card" id="ration">
                 <header class="flex items-start gap-2 text-primary">
                   <svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-bowl"></use></svg>
@@ -208,6 +241,7 @@
                 <a href="#" class="btn btn--primary btn--block"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-plus"></use></svg> Встановити новий раціон</a>
               </article>
 
+              <!-- Список останніх зважувань дає змогу порівняти значення за датами. -->
               <article class="card cards:col-span-2">
                 <header class="flex items-start gap-2"><div><h3 class="font-sans text-heading3 font-semibold text-text">Останні зважування</h3><p class="text-muted text-small">Однаковий час — точніше порівняння</p></div></header>
                 <ul>
@@ -218,6 +252,7 @@
                 <p class="text-center"><a href="#" class="inline-flex min-h-11 items-center font-semibold no-underline transition-colors duration-200 hover:text-primary-hover hover:underline active:text-primary-active">Вся історія ваги</a></p>
               </article>
 
+              <!-- Коротка історія попередніх раціонів. -->
               <article class="card">
                 <header class="flex items-start gap-2"><div><h3 class="font-sans text-heading3 font-semibold text-text">Попередні раціони</h3><p class="text-muted text-small">3 останні</p></div></header>
                 <ul class="grid gap-4">
@@ -227,6 +262,7 @@
                 </ul>
               </article>
 
+              <!-- Демо-форма нового зважування; action="#" не зберігає дані на сервері. -->
               <article class="card cards:col-span-2" id="weigh">
                 <header class="flex items-start gap-2"><div><h3 class="font-sans text-heading3 font-semibold text-text">Нове зважування</h3></div></header>
                 <form class="grid gap-4 grid-cols-form items-end" action="#" method="post">
@@ -236,12 +272,14 @@
                 </form>
               </article>
 
+              <!-- Інформаційна картка з нагадуванням про регулярне зважування. -->
               <article class="card">
                 <p class="badge badge--warning"><svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-clock"></use></svg> Нагадування активне</p>
                 <p class="text-small">Зважуйте Марса раз на тиждень. Якщо вага різко зміниться або зникне апетит — зверніться до ветеринара.</p>
                 <a href="#" class="btn btn--outline btn--sm">Налаштувати нагадування</a>
               </article>
 
+              <!-- Демо-форма нотатки про самопочуття; action="#" не зберігає дані на сервері. -->
               <article class="card cards:col-span-full">
                 <header class="flex items-start gap-2 text-primary">
                   <svg class="h-5 w-5 flex-none" aria-hidden="true"><use href="#icon-heart"></use></svg>
@@ -258,6 +296,7 @@
         </div>
       </section>
 
+      <!-- Відгук у форматі цитати про досвід використання щоденника. -->
       <section class="py-12 lg:py-16" aria-labelledby="story-title">
         <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
           <figure class="grid items-center gap-8 rounded-card bg-secondary-soft p-6 tablet:grid-cols-story tablet:p-8 group">
@@ -273,6 +312,7 @@
         </div>
       </section>
 
+      <!-- FAQ: нативні details/summary відкривають і закривають відповіді без JavaScript. -->
       <section class="py-12 lg:py-16 bg-tint" id="faq" aria-labelledby="faq-title">
         <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
           <h2 class="font-sans text-heading2 font-bold" id="faq-title">Питання, які виникають перед стартом.</h2>
@@ -285,6 +325,26 @@
         </div>
       </section>
 
+      <!-- Контактна інформація, посилання на мапу та вбудована карта Google Maps. -->
+      <section class="py-12 lg:py-16" id="contacts" aria-labelledby="contacts-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <h2 class="mb-8 font-sans text-heading2 font-bold" id="contacts-title">Контакти</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="grid content-start gap-4">
+              <address class="not-italic text-muted">Чудове місце куди можна прийти зі своїм улюбленцем.</address>
+              <p class="text-muted">Електронна пошта: <a class="font-semibold text-primary no-underline hover:underline" href="mailto:hello@pukhnastyi.ua">hello@pukhnastyi.ua</a></p>
+              <a class="inline-flex min-h-11 items-center font-semibold text-primary text-small no-underline transition-colors duration-200 hover:text-primary-hover hover:underline active:text-primary-active" href="https://www.google.com/maps?q=49.800534347702744,24.016292400604332" target="_blank" rel="noopener noreferrer">Відкрити в Google Maps</a>
+            </div>
+            <!-- ===== МЕДІА: карта Google Maps (початок) ===== -->
+            <div class="min-w-0">
+              <iframe class="h-72 md:h-96 w-full rounded-xl shadow-lg border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.8870836920017!2d24.016292400604332!3d49.800534347702744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae70072381c0b%3A0x15fb5f6197d72adb!2z0JrQsNGH0LjQvdC1INC-0LfQtdGA0L4!5e0!3m2!1suk!2sua!4v1793540217365!5m2!1suk!2sua" title="Карта місця, куди можна прийти з улюбленцем" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- ===== МЕДІА: карта Google Maps (кінець) ===== -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Заклик створити щоденник веде користувача до демонстраційної панелі. -->
       <section class="py-12 lg:py-16" aria-labelledby="cta-title">
         <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
           <div class="flex flex-wrap items-center justify-between gap-6 rounded-card bg-primary p-8 text-white">
@@ -295,6 +355,7 @@
       </section>
     </main>
 
+    <!-- Підвал містить короткий опис, допоміжні посилання та контактну пошту. -->
     <footer class="border-t border-border bg-white py-8">
       <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 grid gap-6 tablet:grid-cols-footer">
         <section aria-label="Про щоденник"><a href="#top" class="mb-2 inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><span>Пухнастий друг</span></a><p class="text-muted">Більше спокою вам. Більше здорових днів вашому другу.</p></section>
