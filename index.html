@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk" class="scroll-smooth scroll-pt-24 motion-reduce:scroll-auto">
   <head>
+    <script src="https://cdn.tailwindcss.com"></script>  
     <!-- Налаштування мови, адаптивного відображення, назви та опису сторінки. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,23 +142,23 @@
         </div>
       </section>
 
-      <!-- Вбудоване відео YouTube з адаптивним контейнером і підписом. -->
-      <section class="py-12 lg:py-16" id="video" aria-labelledby="video-title">
-        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
-          <header class="mb-8 grid max-w-section gap-2">
-            <h2 class="font-sans text-heading2 font-bold" id="video-title">Відео про здоров’я улюбленців</h2>
-            <p class="text-muted">Чому так важливо регулярно зважувати своїх улюбленців</p>
-          </header>
-          <!-- ===== МЕДІА: відео YouTube (початок) ===== -->
-          <figure>
-            <div class="mx-auto aspect-video w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
-              <iframe class="h-full w-full" src="https://www.youtube-nocookie.com/embed/xofrhWtnd0I" title="Відео про важливість регулярного зважування улюбленців" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <figcaption class="mt-2 text-muted text-small">Регулярне зважування допомагає стежити за здоров’ям улюбленця. <a href="https://www.youtube.com/watch?v=xofrhWtnd0I" target="_blank" rel="noopener noreferrer">Дивитися на YouTube</a></figcaption>
-          </figure>
-          <!-- ===== МЕДІА: відео YouTube (кінець) ===== -->
-        </div>
-      </section>
+      <!-- Вбудоване відео YouTube з адаптивним контейнером у пропорції 16:9 і підписом. -->
+    <section class="py-12 lg:py-16" id="video" aria-labelledby="video-title">
+      <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+        <header class="mb-8 grid max-w-section gap-2">
+          <h2 class="font-sans text-heading2 font-bold" id="video-title">Відео про здоров’я улюбленців</h2>
+          <p class="text-muted">Чому так важливо регулярно зважувати своїх улюбленців</p>
+        </header>
+        <!-- ===== МЕДІА: відео YouTube (початок) ===== -->
+        <figure class="mx-auto w-full max-w-[56rem]">
+          <div class="aspect-[16/9] w-full overflow-hidden rounded-xl shadow-lg">
+            <iframe class="block h-full w-full border-0" src="https://www.youtube-nocookie.com/embed/xofrhWtnd0I" title="Відео про важливість регулярного зважування улюбленців" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <figcaption class="mt-2 text-muted text-small">Регулярне зважування допомагає стежити за здоров’ям улюбленця. <a class="font-semibold text-primary underline underline-offset-2 hover:text-primary-hover" href="https://www.youtube.com/watch?v=xofrhWtnd0I" target="_blank" rel="noopener noreferrer">Дивитися на YouTube</a></figcaption>
+        </figure>
+        <!-- ===== МЕДІА: відео YouTube (кінець) ===== -->
+      </div>
+    </section>
 
       <!-- Демонстраційний макет щоденника: меню розділів і панель даних улюбленця. -->
       <section class="py-12 lg:py-16 bg-tint" id="diary" aria-labelledby="diary-title">
