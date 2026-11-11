@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
+  content: ["./index.html", "./validation.js"],
   theme: {
     screens: {
       sm: "640px",
+      md: "768px",
       tablet: "760px",
       wide: "900px",
       cards: "1000px",

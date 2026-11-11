@@ -342,6 +342,50 @@
             </div>
             <!-- ===== МЕДІА: карта Google Maps (кінець) ===== -->
           </div>
+          <div class="mx-auto mt-10 w-full max-w-section">
+            <h3 class="mb-6 font-sans text-heading3 font-semibold" id="feedback-title">Напишіть нам</h3>
+            <form id="feedbackForm" class="grid grid-cols-1 gap-5 md:grid-cols-2" action="#" method="post" aria-labelledby="feedback-title">
+              <div class="grid content-start gap-1">
+                <label class="text-small font-semibold" for="feedback-name">Ім’я</label>
+                <input id="feedback-name" name="name" type="text" autocomplete="name" required aria-describedby="feedback-name-error" class="peer min-h-12 w-full rounded-lg border border-border-strong bg-white px-4 py-3 text-base text-text transition-colors hover:border-primary focus-visible:border-primary focus-visible:ring-4 focus-visible:ring-primary-soft aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-200 data-[state=success]:border-success data-[state=success]:ring-2 data-[state=success]:ring-success-bg">
+                <p id="feedback-name-error" class="hidden text-small text-red-700 peer-aria-[invalid=true]:block">Введіть ім’я.</p>
+              </div>
+              <div class="grid content-start gap-1">
+                <label class="text-small font-semibold" for="feedback-email">Емейл</label>
+                <input id="feedback-email" name="email" type="email" autocomplete="email" required aria-describedby="feedback-email-error" class="peer min-h-12 w-full rounded-lg border border-border-strong bg-white px-4 py-3 text-base text-text transition-colors hover:border-primary focus-visible:border-primary focus-visible:ring-4 focus-visible:ring-primary-soft aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-200 data-[state=success]:border-success data-[state=success]:ring-2 data-[state=success]:ring-success-bg">
+                <p id="feedback-email-error" class="hidden text-small text-red-700 peer-aria-[invalid=true]:block">Введіть коректну електронну адресу.</p>
+              </div>
+              <div class="grid content-start gap-1">
+                <label class="text-small font-semibold" for="feedback-phone">Телефон</label>
+                <input id="feedback-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="feedback-phone-error" class="peer min-h-12 w-full rounded-lg border border-border-strong bg-white px-4 py-3 text-base text-text transition-colors hover:border-primary focus-visible:border-primary focus-visible:ring-4 focus-visible:ring-primary-soft aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-200 data-[state=success]:border-success data-[state=success]:ring-2 data-[state=success]:ring-success-bg">
+                <p id="feedback-phone-error" class="hidden text-small text-red-700 peer-aria-[invalid=true]:block">Перевірте номер телефону.</p>
+              </div>
+              <div class="grid content-start gap-1 md:col-span-2">
+                <label class="text-small font-semibold" for="feedback-expectations">Ваші очікування від програми</label>
+                <textarea id="feedback-expectations" name="expectations" rows="5" required aria-describedby="feedback-expectations-error" class="peer min-h-32 w-full resize-y rounded-lg border border-border-strong bg-white px-4 py-3 text-base text-text transition-colors hover:border-primary focus-visible:border-primary focus-visible:ring-4 focus-visible:ring-primary-soft aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-200 data-[state=success]:border-success data-[state=success]:ring-2 data-[state=success]:ring-success-bg"></textarea>
+                <p id="feedback-expectations-error" class="hidden text-small text-red-700 peer-aria-[invalid=true]:block">Опишіть, чого ви очікуєте від програми.</p>
+              </div>
+              <div class="grid content-start gap-1 md:col-span-2">
+                <div class="flex flex-wrap items-start gap-3">
+                  <input id="feedback-privacy" name="privacy-consent" type="checkbox" required aria-describedby="feedback-privacy-error" class="peer mt-1 h-5 w-5 shrink-0 accent-primary focus-visible:ring-4 focus-visible:ring-primary-soft aria-[invalid=true]:outline aria-[invalid=true]:outline-2 aria-[invalid=true]:outline-red-600 data-[state=success]:accent-success">
+                  <label for="feedback-privacy" class="text-small">Погоджуюся з <a href="/privacy-policy" class="font-semibold text-primary underline underline-offset-2 hover:text-primary-hover">політикою конфіденційності</a>.</label>
+                  <p id="feedback-privacy-error" class="hidden basis-full text-small text-red-700 peer-aria-[invalid=true]:block">Потрібно надати згоду з політикою конфіденційності.</p>
+                </div>
+              </div>
+              <button type="submit" class="min-h-12 w-full rounded-xl bg-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-soft active:bg-primary-active md:col-span-2">Надіслати</button>
+            </form>
+            <dialog id="feedbackSuccessDialog" class="fixed inset-0 m-auto max-h-[90vh] w-[calc(100%-2rem)] max-w-md overflow-y-auto rounded-2xl border border-border bg-white p-0 text-text shadow-2xl backdrop:bg-text/60" aria-labelledby="feedback-success-title" aria-describedby="feedback-success-description" aria-modal="true">
+              <div class="grid justify-items-center gap-4 p-6 text-center sm:p-8">
+                <svg class="h-12 w-12 text-success" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
+                  <path d="m8 12 2.5 2.5L16.5 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                <h3 id="feedback-success-title" class="font-sans text-heading3 font-semibold">Дякуємо!</h3>
+                <p id="feedback-success-description" class="text-muted">Форму успішно перевірено. Дякуємо, що поділилися своїми очікуваннями від програми.</p>
+                <button id="feedbackSuccessClose" type="button" autofocus class="min-h-12 w-full rounded-xl bg-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-soft active:bg-primary-active sm:w-auto">Закрити</button>
+              </div>
+            </dialog>
+          </div>
         </div>
       </section>
 
@@ -364,5 +408,6 @@
         <p class="text-muted text-small tablet:col-span-full">© 2026 Пухнастий друг · <a href="mailto:hello@pukhnastyi.ua" class="text-primary">hello@pukhnastyi.ua</a> · Щоденник не замінює консультацію ветеринара.</p>
       </div>
     </footer>
+    <script src="validation.js" defer></script>
   </body>
 </html>
