@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки — Пухнастий друг</title>
+    <meta name="description" content="Відгуки власників, які ведуть щоденник ваги, раціону та самопочуття улюбленців у сервісі «Пухнастий друг».">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+      .reviews-swiper .swiper-slide { height: auto; }
+      .reviews-swiper .swiper-button-next,
+      .reviews-swiper .swiper-button-prev {
+        color: #5b3fd6;
+        background: #fff;
+        width: 48px;
+        height: 48px;
+        border-radius: 9999px;
+        box-shadow: 0 4px 14px rgba(31, 27, 77, 0.12);
+        border: 1px solid #d9d3f2;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+      .reviews-swiper .swiper-button-next:hover,
+      .reviews-swiper .swiper-button-prev:hover { background: #ede7ff; transform: scale(1.06); }
+      .reviews-swiper .swiper-button-next::after,
+      .reviews-swiper .swiper-button-prev::after { font-size: 18px; font-weight: 700; }
+      .reviews-swiper .swiper-pagination-bullet {
+        width: 10px; height: 10px; background: #d9d3f2; opacity: 1; transition: all 0.25s ease;
+      }
+      .reviews-swiper .swiper-pagination-bullet-active { background: #5b3fd6; width: 28px; border-radius: 9999px; }
+    </style>
+  </head>
+  <body class="m-0 bg-background text-text font-sans text-base leading-6">
+    <a href="#main" class="absolute -top-skip left-4 z-20 rounded-lg bg-primary px-4 py-2 text-white focus:top-2 focus-visible:ring-4 focus-visible:ring-primary-soft">Перейти до змісту</a>
+
+    <header class="sticky top-0 z-10 border-b border-border bg-white">
+      <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 flex min-h-16 flex-wrap items-center gap-x-6 gap-y-2 py-2">
+        <a href="index.html#top" class="inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><img class="h-9 w-9 object-contain" src="assets/images/logo.png" alt="" width="36" height="36"><span>Пухнастий друг</span></a>
+        <nav class="order-3 w-full overflow-x-auto tablet:order-none tablet:w-auto tablet:flex-1 tablet:overflow-visible" aria-label="Головна навігація">
+          <ul class="flex justify-center gap-6">
+            <li><a href="index.html#features" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Можливості</a></li>
+            <li><a href="index.html#how" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Як це працює</a></li>
+            <li><a href="gallery.html" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Галерея</a></li>
+            <li><a href="reviews.html" aria-current="page" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-primary no-underline transition-colors duration-200">Відгуки</a></li>
+            <li><a href="index.html#contacts" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Контакти</a></li>
+            <li><a href="index.html#faq" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Питання</a></li>
+          </ul>
+        </nav>
+        <div class="ml-auto flex items-center gap-4">
+          <a href="index.html#diary" class="btn btn--primary">Почати демо</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="py-12 lg:py-16" aria-labelledby="reviews-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <header class="mb-10 grid max-w-section gap-2 text-center mx-auto">
+            <p class="text-caption font-semibold text-primary">Досвід власників</p>
+            <h1 class="font-sans text-heading2 font-bold" id="reviews-title">Відгуки про щоденник</h1>
+            <p class="text-muted">Як «Пухнастий друг» допомагає стежити за вагою, раціоном і самопочуттям улюбленців.</p>
+          </header>
+
+          <div class="relative">
+            <div class="reviews-swiper swiper !pb-4" dir="ltr">
+              <div class="swiper-wrapper" role="list" aria-label="Список відгуків">
+                <article class="swiper-slide" role="listitem" aria-label="Відгук 1 з 6">
+                  <figure class="flex h-full flex-col justify-between rounded-card border border-border bg-white p-6 shadow-card sm:p-8">
+                    <div>
+                      <div class="flex items-center gap-0.5 text-amber-500" role="img" aria-label="Рейтинг 5 з 5">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                      </div>
+                      <blockquote class="mt-4 leading-relaxed text-text">«Нарешті бачу динаміку ваги Марусі на одному графіку. Зручно порівнювати тижні й не забувати про регулярні зважування.»</blockquote>
+                    </div>
+                    <figcaption class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&crop=faces" alt="Аватар Оксани" loading="lazy" width="48" height="48" class="h-12 w-12 rounded-full object-cover ring-2 ring-primary-soft" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                      <span class="hidden h-12 w-12 items-center justify-center rounded-full bg-primary-soft font-semibold text-primary" style="display:none">О</span>
+                      <div>
+                        <p class="font-semibold">Оксана Ковальчук</p>
+                        <p class="text-small text-muted">власниця кота</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="swiper-slide" role="listitem" aria-label="Відгук 2 з 6">
+                  <figure class="flex h-full flex-col justify-between rounded-card border border-border bg-white p-6 shadow-card sm:p-8">
+                    <div>
+                      <div class="flex items-center gap-0.5 text-amber-500" role="img" aria-label="Рейтинг 5 з 5">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                      </div>
+                      <blockquote class="mt-4 leading-relaxed text-text">«Записую раціон щодня — тепер точно знаю, скільки з’їв пес і чи вистачає корму. Дуже рятує, коли про догляд дбають кілька людей.»</blockquote>
+                    </div>
+                    <figcaption class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&crop=faces" alt="Аватар Дмитра" loading="lazy" width="48" height="48" class="h-12 w-12 rounded-full object-cover ring-2 ring-primary-soft" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                      <span class="hidden h-12 w-12 items-center justify-center rounded-full bg-primary-soft font-semibold text-primary" style="display:none">Д</span>
+                      <div>
+                        <p class="font-semibold">Дмитро Литвин</p>
+                        <p class="text-small text-muted">власник собаки</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="swiper-slide" role="listitem" aria-label="Відгук 3 з 6">
+                  <figure class="flex h-full flex-col justify-between rounded-card border border-border bg-white p-6 shadow-card sm:p-8">
+                    <div>
+                      <div class="flex items-center gap-0.5 text-amber-500" role="img" aria-label="Рейтинг 5 з 5">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                      </div>
+                      <blockquote class="mt-4 leading-relaxed text-text">«Подобається простота: вага, їжа, коротка нотатка — і все під рукою. На прийомі у ветеринара було легко показати історію змін.»</blockquote>
+                    </div>
+                    <figcaption class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&crop=faces" alt="Аватар Ірини" loading="lazy" width="48" height="48" class="h-12 w-12 rounded-full object-cover ring-2 ring-primary-soft" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                      <span class="hidden h-12 w-12 items-center justify-center rounded-full bg-primary-soft font-semibold text-primary" style="display:none">І</span>
+                      <div>
+                        <p class="font-semibold">Ірина Ткаченко</p>
+                        <p class="text-small text-muted">власниця двох котів</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="swiper-slide" role="listitem" aria-label="Відгук 4 з 6">
+                  <figure class="flex h-full flex-col justify-between rounded-card border border-border bg-white p-6 shadow-card sm:p-8">
+                    <div>
+                      <div class="flex items-center gap-0.5 text-amber-500" role="img" aria-label="Рейтинг 5 з 5">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                      </div>
+                      <blockquote class="mt-4 leading-relaxed text-text">«Нагадування про зважування — дрібниця, але саме вона сформувала звичку. Тепер контроль ваги не викликає стресу.»</blockquote>
+                    </div>
+                    <figcaption class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=faces" alt="Аватар Андрія" loading="lazy" width="48" height="48" class="h-12 w-12 rounded-full object-cover ring-2 ring-primary-soft" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                      <span class="hidden h-12 w-12 items-center justify-center rounded-full bg-primary-soft font-semibold text-primary" style="display:none">А</span>
+                      <div>
+                        <p class="font-semibold">Андрій Мельник</p>
+                        <p class="text-small text-muted">власник лабрадора</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="swiper-slide" role="listitem" aria-label="Відгук 5 з 6">
+                  <figure class="flex h-full flex-col justify-between rounded-card border border-border bg-white p-6 shadow-card sm:p-8">
+                    <div>
+                      <div class="flex items-center gap-0.5 text-amber-500" role="img" aria-label="Рейтинг 5 з 5">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                      </div>
+                      <blockquote class="mt-4 leading-relaxed text-text">«Після зміни корму було важливо відстежити реакцію. Нотатки про самопочуття й апетит допомогли побачити, що новий раціон підходить.»</blockquote>
+                    </div>
+                    <figcaption class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&crop=faces" alt="Аватар Наталії" loading="lazy" width="48" height="48" class="h-12 w-12 rounded-full object-cover ring-2 ring-primary-soft" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                      <span class="hidden h-12 w-12 items-center justify-center rounded-full bg-primary-soft font-semibold text-primary" style="display:none">Н</span>
+                      <div>
+                        <p class="font-semibold">Наталія Гриценко</p>
+                        <p class="text-small text-muted">власниця кролика</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="swiper-slide" role="listitem" aria-label="Відгук 6 з 6">
+                  <figure class="flex h-full flex-col justify-between rounded-card border border-border bg-white p-6 shadow-card sm:p-8">
+                    <div>
+                      <div class="flex items-center gap-0.5 text-amber-500" role="img" aria-label="Рейтинг 5 з 5">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                      </div>
+                      <blockquote class="mt-4 leading-relaxed text-text">«Зручно, що все в одному місці: вага, харчування, нотатки. Почуваюся спокійніше, бо бачу повну картину здоров’я мого улюбленця.»</blockquote>
+                    </div>
+                    <figcaption class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=96&h=96&fit=crop&crop=faces" alt="Аватар Максима" loading="lazy" width="48" height="48" class="h-12 w-12 rounded-full object-cover ring-2 ring-primary-soft" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                      <span class="hidden h-12 w-12 items-center justify-center rounded-full bg-primary-soft font-semibold text-primary" style="display:none">М</span>
+                      <div>
+                        <p class="font-semibold">Максим Бондаренко</p>
+                        <p class="text-small text-muted">власник коргі</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </article>
+              </div>
+            </div>
+
+            <button type="button" class="reviews-button-prev swiper-button-prev !absolute !left-[-8px] !top-[38%] sm:!left-[-24px]" aria-label="Попередній відгук"></button>
+            <button type="button" class="reviews-button-next swiper-button-next !absolute !right-[-8px] !top-[38%] sm:!right-[-24px]" aria-label="Наступний відгук"></button>
+          </div>
+
+          <div class="reviews-pagination swiper-pagination !static !mt-2" role="navigation" aria-label="Навігація слайдів"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-white py-8">
+      <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 grid gap-6 tablet:grid-cols-footer">
+        <section aria-label="Про щоденник"><a href="index.html#top" class="mb-2 inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><span>Пухнастий друг</span></a><p class="text-muted">Більше спокою вам. Більше здорових днів вашому другу.</p></section>
+        <nav aria-label="Допоміжна навігація"><ul class="flex flex-wrap gap-6"><li><a href="gallery.html" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Галерея</a></li><li><a href="reviews.html" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Відгуки</a></li><li><a href="index.html#contacts" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Контакти</a></li></ul></nav>
+        <p class="text-muted text-small tablet:col-span-full">© 2026 Пухнастий друг · <a href="mailto:hello@pukhnastyi.ua" class="text-primary">hello@pukhnastyi.ua</a> · Щоденник не замінює консультацію ветеринара.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/review-slider.js" defer></script>
+  </body>
+</html>

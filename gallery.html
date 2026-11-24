@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея — Пухнастий друг</title>
+    <meta name="description" content="Галерея моментів турботи: фото улюбленців, щоденних нотаток і прогресу в щоденнику «Пухнастий друг».">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css">
+  </head>
+  <body class="m-0 bg-background text-text font-sans text-base leading-6">
+    <a href="#main" class="absolute -top-skip left-4 z-20 rounded-lg bg-primary px-4 py-2 text-white focus:top-2 focus-visible:ring-4 focus-visible:ring-primary-soft">Перейти до змісту</a>
+
+    <header class="sticky top-0 z-10 border-b border-border bg-white">
+      <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 flex min-h-16 flex-wrap items-center gap-x-6 gap-y-2 py-2">
+        <a href="index.html#top" class="inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><img class="h-9 w-9 object-contain" src="assets/images/logo.png" alt="" width="36" height="36"><span>Пухнастий друг</span></a>
+        <nav class="order-3 w-full overflow-x-auto tablet:order-none tablet:w-auto tablet:flex-1 tablet:overflow-visible" aria-label="Головна навігація">
+          <ul class="flex justify-center gap-6">
+            <li><a href="index.html#features" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Можливості</a></li>
+            <li><a href="index.html#how" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Як це працює</a></li>
+            <li><a href="gallery.html" aria-current="page" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-primary no-underline transition-colors duration-200">Галерея</a></li>
+            <li><a href="reviews.html" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Відгуки</a></li>
+            <li><a href="index.html#contacts" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Контакти</a></li>
+            <li><a href="index.html#faq" class="inline-flex min-h-11 items-center py-2 text-small font-medium text-text no-underline transition-colors duration-200 hover:text-primary">Питання</a></li>
+          </ul>
+        </nav>
+        <div class="ml-auto flex items-center gap-4">
+          <a href="index.html#diary" class="btn btn--primary">Почати демо</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="py-12 lg:py-16" aria-labelledby="gallery-title">
+        <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 grid max-w-section gap-2">
+            <p class="text-caption font-semibold text-primary">Моменти турботи</p>
+            <h1 class="font-sans text-heading2 font-bold" id="gallery-title">Галерея щоденника</h1>
+            <p class="text-muted">Фото прогулянок, зважувань і маленьких перемог — усе, що допомагає бачити динаміку та радіти прогресу улюбленця.</p>
+          </header>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
+            <a href="assets/images/mars.jpg" data-fancybox="pet-gallery" data-caption="Марс після прогулянки — активність і гарний настрій" class="group relative block overflow-hidden rounded-card border border-border bg-white shadow-card transition-card duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <img src="assets/images/mars.jpg" alt="Коргі Марс на прогулянці" loading="lazy" width="800" height="600" class="h-72 w-full object-cover transition duration-300 group-hover:scale-105">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-text/70 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">
+                <p class="text-small font-medium text-white">Марс після прогулянки</p>
+              </div>
+            </a>
+
+            <a href="assets/images/testimonial.jpg" data-fancybox="pet-gallery" data-caption="Спільні ритуали турботи роблять щоденник корисною звичкою" class="group relative block overflow-hidden rounded-card border border-border bg-white shadow-card transition-card duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <img src="assets/images/testimonial.jpg" alt="Власниця обіймає свого улюбленця" loading="lazy" width="800" height="600" class="h-72 w-full object-cover transition duration-300 group-hover:scale-105">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-text/70 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">
+                <p class="text-small font-medium text-white">Турбота поруч щодня</p>
+              </div>
+            </a>
+
+            <a href="assets/images/hero-loop.png" data-fancybox="pet-gallery" data-caption="Щоденник допомагає тримати вагу, раціон і нотатки в одному місці" class="group relative block overflow-hidden rounded-card border border-border bg-white shadow-card transition-card duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <img src="assets/images/hero-loop.png" alt="Ілюстрація щоденника здоров'я улюбленця" loading="lazy" width="800" height="600" class="h-72 w-full object-cover transition duration-300 group-hover:scale-105">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-text/70 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">
+                <p class="text-small font-medium text-white">Усі записи в одному місці</p>
+              </div>
+            </a>
+
+            <a href="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1200&q=80" data-fancybox="pet-gallery" data-caption="Регулярні нотатки про самопочуття допомагають помічати зміни вчасно" class="group relative block overflow-hidden rounded-card border border-border bg-white shadow-card transition-card duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800&q=80" alt="Собака уважно дивиться в камеру" loading="lazy" width="800" height="600" class="h-72 w-full object-cover transition duration-300 group-hover:scale-105">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-text/70 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">
+                <p class="text-small font-medium text-white">Нотатки про самопочуття</p>
+              </div>
+            </a>
+
+            <a href="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&q=80" data-fancybox="pet-gallery" data-caption="Контроль раціону — важлива частина щоденної турботи" class="group relative block overflow-hidden rounded-card border border-border bg-white shadow-card transition-card duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800&q=80" alt="Кіт поруч із мискою" loading="lazy" width="800" height="600" class="h-72 w-full object-cover transition duration-300 group-hover:scale-105">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-text/70 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">
+                <p class="text-small font-medium text-white">Раціон під контролем</p>
+              </div>
+            </a>
+
+            <a href="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1200&q=80" data-fancybox="pet-gallery" data-caption="Маленькі записи щодня складаються у велику історію здоров'я" class="group relative block overflow-hidden rounded-card border border-border bg-white shadow-card transition-card duration-300 hover:-translate-y-0.5 hover:shadow-md">
+              <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=80" alt="Собака і кіт разом" loading="lazy" width="800" height="600" class="h-72 w-full object-cover transition duration-300 group-hover:scale-105">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-text/70 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">
+                <p class="text-small font-medium text-white">Історія здоров'я</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-white py-8">
+      <div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 grid gap-6 tablet:grid-cols-footer">
+        <section aria-label="Про щоденник"><a href="index.html#top" class="mb-2 inline-flex min-h-11 items-center gap-2 text-lead font-semibold text-text no-underline"><span>Пухнастий друг</span></a><p class="text-muted">Більше спокою вам. Більше здорових днів вашому другу.</p></section>
+        <nav aria-label="Допоміжна навігація"><ul class="flex flex-wrap gap-6"><li><a href="gallery.html" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Галерея</a></li><li><a href="reviews.html" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Відгуки</a></li><li><a href="index.html#contacts" class="inline-flex min-h-11 items-center text-small text-muted no-underline transition-colors duration-200 hover:text-primary">Контакти</a></li></ul></nav>
+        <p class="text-muted text-small tablet:col-span-full">© 2026 Пухнастий друг · <a href="mailto:hello@pukhnastyi.ua" class="text-primary">hello@pukhnastyi.ua</a> · Щоденник не замінює консультацію ветеринара.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/galary.js" defer></script>
+  </body>
+</html>
